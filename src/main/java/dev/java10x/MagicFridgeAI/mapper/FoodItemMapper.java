@@ -4,7 +4,7 @@ import dev.java10x.MagicFridgeAI.dto.FoodItemDTO;
 import dev.java10x.MagicFridgeAI.model.FoodItem;
 
 public class FoodItemMapper {
-    FoodItem map(FoodItemDTO foodItemDTO){
+    public FoodItem map(FoodItemDTO foodItemDTO){
         FoodItem foodItem = new FoodItem();
         foodItem.setId(foodItemDTO.getId());
         foodItem.setName(foodItemDTO.getName());
@@ -15,7 +15,7 @@ public class FoodItemMapper {
         return foodItem;
     }
 
-    FoodItemDTO map(FoodItem foodItem){
+    public FoodItemDTO map(FoodItem foodItem){
         FoodItemDTO foodItemDTO = new FoodItemDTO();
         foodItemDTO.setId(foodItem.getId());
         foodItemDTO.setName(foodItem.getName());
