@@ -1,6 +1,5 @@
 package dev.java10x.MagicFridgeAI.model;
 
-import dev.java10x.MagicFridgeAI.enums.CategoryFoodItem;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -17,17 +16,13 @@ public class FoodItem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name")
     private String name;
 
-    @Column(name = "category")
-    private CategoryFoodItem category;
+    private String category;
 
-    @Column(name = "quantity")
     private Integer quantity;
 
-    @Column(name = "expiration_date")
-    private LocalDate expirationDate;
+    private LocalDate expiration_date;
 
     public Long getId() {
         return id;
@@ -45,11 +40,11 @@ public class FoodItem {
         this.name = name;
     }
 
-    public CategoryFoodItem getCategory() {
+    public String getCategory() {
         return category;
     }
 
-    public void setCategory(CategoryFoodItem category) {
+    public void setCategory(String category) {
         this.category = category;
     }
 
@@ -61,11 +56,11 @@ public class FoodItem {
         this.quantity = quantity;
     }
 
-    public LocalDate getExpirationDate() {
-        return expirationDate;
+    public LocalDate getExpiration_date() {
+        return expiration_date;
     }
 
-    public void setExpirationDate(LocalDate expirationDate) {
-        this.expirationDate = expirationDate;
+    public void setExpiration_date(LocalDate expiration_date) {
+        this.expiration_date = expiration_date;
     }
 }

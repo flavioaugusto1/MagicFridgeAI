@@ -11,8 +11,8 @@ import java.util.Optional;
 
 @Service
 public class FoodItemService {
-    private FoodItemRepository foodItemRepository;
-    private FoodItemMapper foodItemMapper;
+    private final FoodItemRepository foodItemRepository;
+    private final FoodItemMapper foodItemMapper;
 
     public FoodItemService(FoodItemRepository foodItemRepository, FoodItemMapper foodItemMapper) {
         this.foodItemRepository = foodItemRepository;
