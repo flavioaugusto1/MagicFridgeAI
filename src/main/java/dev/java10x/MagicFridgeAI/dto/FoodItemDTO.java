@@ -1,25 +1,23 @@
 package dev.java10x.MagicFridgeAI.dto;
 
-import dev.java10x.MagicFridgeAI.enums.CategoryFoodItem;
-
 import java.time.LocalDate;
 
 public class FoodItemDTO {
     private Long id;
     private String name;
-    private CategoryFoodItem category;
+    private String category;
     private Integer quantity;
-    private LocalDate expirationDate;
+    private LocalDate expiration_date;
 
     public FoodItemDTO() {
     }
 
-    public FoodItemDTO(Long id, String name, CategoryFoodItem category, Integer quantity, LocalDate expirationDate) {
+    public FoodItemDTO(Long id, String name, String category, Integer quantity, LocalDate expiration_date) {
         this.id = id;
         this.name = name;
         this.category = category;
         this.quantity = quantity;
-        this.expirationDate = expirationDate;
+        this.expiration_date = expiration_date;
     }
 
     public Long getId() {
@@ -38,11 +36,11 @@ public class FoodItemDTO {
         this.name = name;
     }
 
-    public CategoryFoodItem getCategory() {
+    public String getCategory() {
         return category;
     }
 
-    public void setCategory(CategoryFoodItem category) {
+    public void setCategory(String category) {
         this.category = category;
     }
 
@@ -54,11 +52,11 @@ public class FoodItemDTO {
         this.quantity = quantity;
     }
 
-    public LocalDate getExpirationDate() {
-        return expirationDate;
+    public LocalDate getExpiration_date() {
+        return expiration_date;
     }
 
-    public void setExpirationDate(LocalDate expirationDate) {
-        this.expirationDate = expirationDate;
+    public void setExpiration_date(LocalDate expiration_date) {
+        this.expiration_date = expiration_date;
     }
 }
